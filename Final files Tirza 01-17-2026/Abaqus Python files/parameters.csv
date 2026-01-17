@@ -1,0 +1,67 @@
+data1,data2,data3
+Case,,
+Type,2,See Documentation
+Base,,
+baseWidth,152,The width of the base in millimeters.
+baseLength,304,The length of the base in millimeters.
+baseThick,4,The thickness of the base in millimeters.
+Substrate,,
+subsWidth,60,The width of the substrate in millimeters.
+subsLength,40,The length of the substrate in millimeters.
+subsThick,4,The thickness of the substrate in millimeters.
+Deposition,,
+depLength,60,The length of the  deposition in millimeters.
+depTrkWidth,1,The track width of the deposition in millimeters.
+depTrkThick,0.5,The track thickness of the deposition in millimeters.
+depTrksPerLyr,10,The number of tracks per layer in the deposition.
+Layers,,
+depNoOfLyrs,1,No of layers
+LayerTransPattern,1,See Documentation.
+Steps,,
+HotplateSSTime,1000,Duration of the hot plate on
+HotplateSSTimeInc,50,Increment for Hot Plate Calculations
+PreHeatingTime,1,The pre-heating time in seconds.
+PreHeatingTimeInc,0.1,The increment of pre-heating time in seconds.
+DepositionTime,92.82,This is now automatically calculated in the python code
+DepositionTimeInc,0.018,The increment of deposition time in seconds.
+CoolingTime1,300,The cooling time in seconds.
+CoolingTimeInc1,5,The increment of cooling time in seconds.
+ReleaseFixturesTime,10,The release fixture time in seconds.
+CoolingTime2,300,The cooling2 time in seconds.
+CoolingTimeInc2,5,The increment of cooling2 time in seconds.
+clamps,,
+clampWidthXplus,2,The width of the clamp in the X+ direction in millimeters.
+clampWidthXminus,2,The width of the clamp in the X- direction in millimeters.
+Mesh,,
+BiasMeshSubDir1Ratio,1.75,The bias mesh subdivision ratio in direction 1.
+BiasMeshSubDir2Ratio,1,The bias mesh subdivision ratio in direction 2.
+BiasMeshSubDir3Ratio,20,The bias mesh subdivision ratio in direction 3.
+Laser,,
+P_deposition,0.00E+00,The power of the laser during deposition in microwatts.
+P_preheat,0.00E+00,The power of the laser during preheat in microwatts.
+r0,10,The radius at the beam waist of the laser in millimeters.
+Nozzle,,
+sprayNzzlVel,50,Spray Nozzle Velocity
+sprayNzzlAccel,178.5,Spray Nozzle Accelaration
+Spray,,
+sprayFrmsPerTrk,80,The frames per track in the spray process.
+Stress,,
+eig11,-3.80E-05,The eigenvalue of stress in the 11 direction.
+eig22,-3.80E-05,The eigenvalue of stress in the 11 direction.
+eig33,-3.80E-05,The eigenvalue of stress in the 11 direction.
+Others,,
+ambientTemp,300,The ambient temperature in Kelvin.
+emissSubsDep,0.4,The emissivity of the substrate and deposition.
+FreeConvectionCf,10,Free convection coefficient
+HotPlate,,
+HotPlateTemp,400,
+film_ContactCoefHP,90,
+ForcedConvection,,
+TrA1,172.2,
+TrB1,0.003831,
+TrA2,298.6,
+TrB2,-0.01661,
+hrA1,49650,
+hrB1,-0.7633,
+hrA2,5840,
+hrB2,-0.02308,

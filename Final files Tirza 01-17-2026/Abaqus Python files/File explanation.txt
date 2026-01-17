@@ -1,0 +1,20 @@
+///// Abaqus Python files \\\\\
+
+Most recent version which includes all my adjustments: Case2_abq2023HP_v23.py
+
+Before run: check if parameters.csv is in the same folder as the Pyhton script. Change the file path, set the variables run_step_1, run_step_2 and partition.
+
+Case2_abq2023HP_v14_hotplate-preheating_option.py:
+The code where I have put the HotplateSS and Preheating steps in conditional statements so you can set the variables Run_step_1 to 1 to include the HotplateSS step and set the variable Run_step_2 to 1 to include the Preheating step.
+
+Case2_abq2023HP_v17_fix_temp_try5.py:
+The code where the initial temperatures are fixed. The heat transfer job and the stress job now have the same initial state.
+
+Case2_abq2023HP_v23.py:
+The code where I adjusted the mesh assignment, so you can now change the mesh size by changing the variables minMeshSizeX, minMeshSizeY and minMeshSizeZ. These variables also determine the number of mesh elements per deposition volume, so a mesh element in the deposition region will have the size minMeshSizeX x minMeshSizeY x minMeshSizeZ. Make sure that an integer number of elements fit into the deposition volume, so minMeshSizeZ should be depTrkWidth/n for n is any number.
+
+parameters.csv:
+The parameters file used for this project. Make sure that the parameters file is in the same folder as the Pyhton file.
+
+Parameter explanation.docx:
+File with explanations for each parameter in the Abaqus Python code.

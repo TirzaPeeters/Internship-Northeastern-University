@@ -1,0 +1,6 @@
+///// Other postprocessing \\\\\
+
+Temperature_over_time_deposition_top_bottom.m:
+Matlab code to plot the temperature (or other field output) over time for top and bottom nodes to compare them with each other in one figure. For interesting results, these pictures were created for the deposition step, but also an overall temperature history is shown in a figure. This code needs the Excel tables with the data of one node which can be created with the scripts in the Mesh convergence study files folder.
+
+

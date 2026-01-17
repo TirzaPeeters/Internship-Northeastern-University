@@ -1,0 +1,24 @@
+///// Mesh convergence study files \\\\\
+
+To execute the mesh convergence study one of the Python files should be used and one of the MATLAB files should be used. The Python files needs to be executed first, as this will create the tables necessary for the Matlab codes.
+
+all_fetching_surface_multiplepoints.py:
+This code extracts the output for the node(s) lying in a very small range of the coordinates given as input. It creates excel tables of this output, which is necessary for the mesh convergence study in MATLAB. This code needs to be executed before the MATLAB code.
+
+all_fetching_surface_multiplepoints_nodenr_input_faster.py:
+This code does the same as the code above, but instead of searching for a node at the given coordinates, the user can insert the node number himself which saves time. You can find the desired node number by inspecting the Abaqus model.
+
+mesh_convergence_study.m:
+This code compares the output from both meshes for multiple field outputs and points and calculates the errors and checks if they are below the threshold. This code only works when all steps have the amount of frames for all meshes.
+
+mesh_convergence_study_improvedforXS.m:
+The XS mesh had a different number of frames in the ReleaseFixtures step and therefore could not be executed with the MATLAB script above. This code therefore removes the output from the ReleaseFixtures step and calculates the errors for the other output. The errors are always calculated with respect to the mesh one size smaller than the considered mesh. So mesh B is compared to mesh S and mesh S is compared to mesh XS.
+
+mesh_convergence_study_improvedforXS_upd.m:
+This code does the same as the MATLAB code above, but the errors are calculated in a different way. The errors are always calculated with respect to the smallest mesh (XS). So mesh B is compared to mesh XS and mesh S is compared to mesh XS.
+
+mesh_convergence_study_improvedforXS_upd_nodenr_input_faster.m:
+This code is the same as the one above but uses the files created with the Python script with the node nr input.
+
+mesh_convergence_study_deposit_improvedforXS_upd_nodenr_input_faster.m:
+This code runs the mesh convergence study on nodes in the top layer of the deposit. Since the top nodes only have relevant results from the moment they have been deposited, the data before this moment is omitted. This code does require some inspection of the excel tables as the moment of deposition needs to be determined by hand, but this is not difficult and is explained in the comments in the code.

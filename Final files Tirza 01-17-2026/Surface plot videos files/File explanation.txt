@@ -1,0 +1,10 @@
+///// Surface plots files \\\\\
+
+all_fetching_surface_multipleplanes_faster.py:
+Python code to extract the output over a desired planar surface. You have to give 3 corner points of the rectangular planar surface as input and the code will create tables with the output. This is necessary to create the surface plots with the MATLAB files, so run this file first.
+
+All_fetching_surface_plot_multipleplanes.m:
+MATLAB code to create the surface plots videos of multiple planar surfaces given as input in the python file. The parameters in this code are set for the 1 layer case.
+
+All_fetching_surface_plot_4layers_multipleplanes.m:
+This is the same code as the All_fetching_surface_plot_multipleplanes.m code, but with some variables set to different names for the 4 layer case. The main thing to pay attention to is the step names, as the 4 layer model was executed without the preheating step.
